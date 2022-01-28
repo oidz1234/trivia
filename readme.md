@@ -83,6 +83,9 @@ choices: '['london','Amsterdam','Kiev','Helsinki']
 * State capital
   <https://github.com/jasperdebie/VisInfo/blob/master/us-state-capitals.csv>
 
+* World capitals
+  <https://raw.githubusercontent.com/icyrockcom/country-capitals/master/data/country-list.json>
+
 
 
 

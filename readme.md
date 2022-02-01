@@ -69,11 +69,17 @@ choices: '['london','Amsterdam','Kiev','Helsinki']
 
 * genrate question ✅
 * Fix relative path
-* Add continent (Future feature) [x]
+* Add continent (Future feature)
 
 
 ### Create a basic api 
 
+```
+/trivia/captial
+```
+
+Eventuall will have a basic trivia api that can call both capitals and
+landmarks as well as everything else.
 
 
 

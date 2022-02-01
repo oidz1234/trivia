@@ -9,7 +9,7 @@ import random
 
 
 def load_json():
-    with open('../data/country-list-with-ids.json', 'r') as file:
+    with open('data/country-list-with-ids.json', 'r') as file:
         data=file.read()
         return json.loads(data)
 
@@ -67,6 +67,15 @@ def make_json(question, rand_choices):
     return response
 
 
+def get_capital_question():
+    data = load_json()
+    question = get_random_capital(data)
+    choices = get_choices(data, question)
+#    print(choices)
+    rand_choices = gen_rand_choices(question, choices)
+#    print(rand_choices)
+    correct = question['country']
+    print(json.dumps(make_json(question, rand_choices)))
 
 
 
@@ -76,6 +85,7 @@ def make_json(question, rand_choices):
 
 
 if __name__ == "__main__":
+    """
     data = load_json()
     question = get_random_capital(data)
     choices = get_choices(data, question)
@@ -83,7 +93,9 @@ if __name__ == "__main__":
     rand_choices = gen_rand_choices(question, choices)
 #    print(rand_choices)
     correct = question['country']
-    print(make_json(question, rand_choices))
+    print(json.dumps(make_json(question, rand_choices)))
+    """
+    get_capital_question()
 
 
 

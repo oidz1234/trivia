@@ -21,13 +21,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 from . import secrets
+from . import custom_conf
 
-SECRET_KEY = 'django-insecure-6x*0itr=_2qn(p62w!=hdxhi-_+m@^ixtz((-mb1e+)vy5x!c6'
+SECRET_KEY = secrets.DJANGO_SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'trivia.mcnally.je']
 
 
 # Application definition
@@ -73,32 +74,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'trivia_api.wsgi.application'
 
+DATABASES = custom_conf.DATABASES
 
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-"""
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'db_name',
-        'USER': 'db_user',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
-"""
-
-
-
+# databases in custom_conf.py file
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -148,3 +126,4 @@ REST_FRAMEWORK = {
 }
 
 API_FUNC_DIR = Path(__file__).resolve().parent.parent.parent / 'api_functions/'
+SCRIPTS_DATA_DIR = Path(__file__).resolve().parent.parent.parent / 'data/'

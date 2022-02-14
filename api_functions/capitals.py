@@ -9,7 +9,8 @@ import random
 
 
 def load_json():
-    with open('./data/country-list-with-ids.json', 'r', encoding='utf-8') as file:
+    # this should be changed to the FDN
+    with open('../data/country-list-with-ids.json', 'r', encoding='utf-8') as file:
         data=file.read()
         return json.loads(data)
 

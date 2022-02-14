@@ -18,9 +18,12 @@ def index(request):
 
 @api_view()
 def test(request):
-    print(settings.API_FUNC_DIR)
-    print(settings.BASE_DIR)
-    return Response({"message": "Hello, it is working!"})
+    #print(settings.API_FUNC_DIR)
+    #print(settings.BASE_DIR)
+    return Response({
+        "message": "Hello, it is working!",
+        "answer": "Yes, yes it is!",
+    })
 
 
 @api_view()

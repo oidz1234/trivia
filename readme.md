@@ -96,6 +96,7 @@ landmarks as well as everything else.
 
 * Restrucure django apps, should have an api with urls like /api/capitals/
 * Add frontend to django app with vvery simple webpage showing how to use api
+* Rate limiting
 
 ## Structure
 

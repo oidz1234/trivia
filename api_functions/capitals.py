@@ -1,16 +1,19 @@
 import json
 import random
 
+from django.conf import settings
+
 # TODO:
 # load json data
 # sort it correctly
 # generate a questions
 
+data_dir = settings.SCRIPTS_DATA_DIR
 
 
 def load_json():
     # this should be changed to the FDN
-    with open('../data/country-list-with-ids.json', 'r', encoding='utf-8') as file:
+    with open(f'{data_dir}/country-list-with-ids.json', 'r', encoding='utf-8') as file:
         data=file.read()
         return json.loads(data)
 

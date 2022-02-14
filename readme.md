@@ -92,7 +92,22 @@ landmarks as well as everything else.
 * World capitals
   <https://raw.githubusercontent.com/icyrockcom/country-capitals/master/data/country-list.json>
 
+## TODO:
 
+* Restrucure django apps, should have an api with urls like /api/capitals/
+* Add frontend to django app with vvery simple webpage showing how to use api
+
+## Structure
+
+Yes it's insane and crazy to do it this way, I know that the data should be
+stored in a database and I know that the api functions should be within the
+django strucure, oh well - I like it this way.
+
+
+
+### Create new questions
+
+Follow the existing fomrat, then just copy the script and it should work.
 
 
 
